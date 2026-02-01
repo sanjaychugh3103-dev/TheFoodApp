@@ -1,0 +1,11 @@
+I am building a cloud-native health app for iOS/Android using React Native (Expo) and Supabase.
+
+Core Constraints:
+
+Security: Use strict validation for passwords (12+ chars, alphanumeric, symbols).
+
+Medical Integrity: All recipe logic must cross-reference verifiable research for Diabetes, Heart Disease, and Cancer.
+
+UI/UX: Use Tailwind CSS (NativeWind) for a clean, accessible design for families.
+
+Scale: Always assume the ingredients must scale based on the number of people in the household.
