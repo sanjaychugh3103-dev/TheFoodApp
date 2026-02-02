@@ -10,7 +10,7 @@ import {
   Alert,
   ActivityIndicator,
 } from 'react-native';
-import { supabase } from '../lib/supabase';
+import { supabase } from '../api/supabase';
 import { 
   ChevronRight, 
   ChevronLeft, 
