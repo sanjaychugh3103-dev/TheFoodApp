@@ -11,6 +11,9 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { supabase } from '../api/supabase';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 import { 
   ChevronRight, 
   ChevronLeft, 
@@ -23,6 +26,7 @@ import {
 } from 'lucide-react-native';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
 
@@ -105,7 +109,7 @@ const OnboardingScreen = () => {
       Alert.alert(
         "Success!", 
         "Please check your email for a verification link.",
-        [{ text: "OK" }]
+        [{ text: "OK", onPress: () => navigation.navigate('Home') }]
       );
     } catch (error: any) {
       Alert.alert("Registration Error", error.message);
